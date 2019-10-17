@@ -3,6 +3,7 @@ import React from 'react';
 import Sub_mari from '../../components/Sub_mari';
 
 import mari from '../../images/mari.jpeg';
+import mari4 from '../../images/mari4.JPG';
 
 import './index.scss';
 
@@ -25,12 +26,21 @@ class Mari extends React.Component {
         </div>
 
         <div className="box">
+
           <div className="image">
             <img src={mari} width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             Hello Mari!
           </div>
+
+          <div className="image">
+            <img src={mari4} width="400px"/>
+          </div>
+          <div className="text" style={textStyle}>
+            Hello Mask Woman!
+          </div>
+
         </div>
 
       </div>
