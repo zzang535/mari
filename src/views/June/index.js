@@ -1,7 +1,4 @@
 import React from 'react';
-import june from '../../images/june.jpeg';
-import junes from '../../images/junes.jpeg';
-import junes2 from '../../images/junes2.jpeg';
 
 import './index.scss';
 
@@ -25,7 +22,7 @@ class June extends React.Component {
 
         <div className="box">
           <div className="image" style={imageStyle}>
-            <img src={june} width="400px"/>
+            <img src='/images/june.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             Hello June!
@@ -34,7 +31,7 @@ class June extends React.Component {
 
         <div className="box">
           <div className="image" style={imageStyle}>
-            <img src={junes2} width="400px"/>
+            <img src='/images/junes2.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             We are June's friends.
@@ -43,7 +40,7 @@ class June extends React.Component {
 
         <div className="box">
           <div className="image" style={imageStyle}>
-            <img src={junes} width="400px"/>
+            <img src='/images/junes.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             We are Pure.

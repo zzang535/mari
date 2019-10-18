@@ -1,7 +1,5 @@
 import React from 'react';
 
-import flower from '../../images/flower.jpeg';
-
 import './index.scss';
 
 class Home extends React.Component {
@@ -20,7 +18,7 @@ class Home extends React.Component {
         </div>
         <br /><br />
         <div className="image">
-          <img src={flower} width="400px"/>
+          <img src="/images/flower.jpeg" width="400px"/>
         </div>
         
 

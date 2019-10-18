@@ -2,9 +2,6 @@ import React from 'react';
 
 import Sub_mari from '../../../components/Sub_mari';
 
-import mari2 from '../../../images/mari2.jpeg';
-import mari3 from '../../../images/mari3.jpeg';
-
 class Hana extends React.Component {
   render() {
 
@@ -29,7 +26,7 @@ class Hana extends React.Component {
 
         <div className="box">
             <div style={imageStyle}>
-                <img src={mari2} width="400px"/>
+                <img src='/images/hana.jpeg' width="400px"/>
             </div>
             <div style={textStyle}>
                 Mari & Hana in Seoul.
@@ -38,7 +35,7 @@ class Hana extends React.Component {
 
         <div className="box">
             <div style={imageStyle}>
-                <img src={mari3} width="400px"/>
+                <img src='/images/hana2.jpeg' width="400px"/>
             </div>
             <div style={textStyle}>
                 Hana is so healthy.

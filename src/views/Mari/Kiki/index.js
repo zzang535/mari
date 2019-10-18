@@ -2,8 +2,6 @@ import React from 'react';
 
 import Sub_mari from '../../../components/Sub_mari';
 
-import kiki from '../../../images/kiki.jpg';
-
 class Kiki extends React.Component {
   render() {
 
@@ -18,7 +16,7 @@ class Kiki extends React.Component {
           <Sub_mari />
         </div>
 
-        <img src={kiki} width="400px"/>
+        <img src='/images/kiki.jpg' width="400px"/>
         <br />
         Hello Kiki
 

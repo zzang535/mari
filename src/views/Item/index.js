@@ -1,8 +1,5 @@
 import React from 'react';
 
-import item1 from '../../images/item1.jpeg';
-import item2 from '../../images/item2.jpeg';
-
 import './index.scss';
 
 
@@ -26,13 +23,13 @@ class Item extends React.Component {
 
         <div className="box">
           <div className="image" style={imageStyle}>
-            <img src={item2} width="400px"/>
+            <img src='/images/item2.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             Mari's Deep Green Bag
           </div>
           <div className="image" style={imageStyle}>
-            <img src={item1} width="400px"/>
+            <img src='/images/item1.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             Incase Compact Sleeve
