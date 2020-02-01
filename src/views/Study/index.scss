@@ -1,0 +1,43 @@
+.study {
+    text-align: center;
+    .title {
+        margin: 50px auto;
+        border: 1px solid gray;
+        max-width: 400px;
+        width: 90%;
+    }
+
+    .input {
+        margin: 50px auto;
+        border: 1px solid gray;
+        max-width: 400px;
+        width: 90%;
+        .button {
+            margin: 30px auto;
+        }
+    }
+
+    .output {
+        margin: 50px auto;
+        padding: 50px 0;
+        border: 1px solid #F5F5DC;
+        max-width: 400px;
+        width: 90%;
+        .june {
+            .box {
+                background-color: #F5F5DC;
+                margin: 10px;
+                padding: 10px;
+                
+            }
+        }
+        .mari {
+            .box {
+                background-color: #F5F5DC;
+                margin: 10px;
+                padding: 10px;
+                
+            }
+        }
+    }
+}

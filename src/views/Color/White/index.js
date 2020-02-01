@@ -1,9 +1,11 @@
 import React from 'react';
 
-import './index.scss';
+import Sub_color from '../../../components/Sub_color';
+
+//import './index.scss';
 
 
-class Item extends React.Component {
+class White extends React.Component {
   render() {
 
     var divStyle = {
@@ -19,20 +21,24 @@ class Item extends React.Component {
     }
 
     return(
-      <div className="item" style={divStyle}>
+      <div className="color" style={divStyle}>
+
+        <div className="sub_menu">
+          <Sub_color />
+        </div>
 
         <div className="box">
           <div className="image" style={imageStyle}>
-            <img src='/images/item2.jpeg' width="400px"/>
+            <img src='/images/white/white2.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
-            Mari's Deep Green Bag
+            White animals
           </div>
           <div className="image" style={imageStyle}>
-            <img src='/images/item1.jpeg' width="400px"/>
+            <img src='/images/white/white1.jpg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
-            Incase Compact Sleeve
+            White people
           </div>
         </div>
 
@@ -42,4 +48,4 @@ class Item extends React.Component {
   }
 }
 
-export default Item;
+export default White;

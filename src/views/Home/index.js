@@ -14,11 +14,11 @@ class Home extends React.Component {
 
         
         <div className="text">
-          안녕하세요. 마리의 홈페이지 입니다.
+          <h4>안녕하세요, 마리와 준의 홈페이지 입니다.</h4>
         </div>
         <br /><br />
         <div className="image">
-          <img src="/images/flower.jpeg" width="400px"/>
+          <img src="/images/birthday.JPG" width="400px"/>
         </div>
         
 
