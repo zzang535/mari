@@ -41,8 +41,10 @@ class Motorcycle extends React.Component {
         // compare function for array sort
         function compare(a, b) {
             // Use toUpperCase() to ignore character casing
-            const dateA = a.date.toUpperCase();
-            const dateB = b.date.toUpperCase();
+            //if(a.date !== NULL && b.date !== NULL){
+                const dateA = a.date.toUpperCase();
+                const dateB = b.date.toUpperCase();
+            //}
             
             let comparison = 0;
             if (dateA > dateB) {
@@ -51,7 +53,7 @@ class Motorcycle extends React.Component {
                 comparison = 1;
             }
             return comparison;
-            }
+        }
 
         // exercise sort by date
         motorcycles.sort(compare);
@@ -114,6 +116,7 @@ class Motorcycle extends React.Component {
             textAlign: 'center'
         }
 
+        // output
         const JuneTakeDisplay = this.state.motorcycles.map((motorcycle) => {
       
                 return (
@@ -121,6 +124,7 @@ class Motorcycle extends React.Component {
                         <span key={motorcycle.id}>
                             {motorcycle.date} 
                             <br />
+                            날짜 : {motorcycle.date} | 
                             시각 : {motorcycle.time} | 
                             기온 : {motorcycle.temperature} | 
                             예열 : {motorcycle.warmup} | 
@@ -133,9 +137,13 @@ class Motorcycle extends React.Component {
                         </span>
                         <br /><br />
                     </div>
-                )
-            
+                )    
         });
+
+
+        const result = this.state.motorcycles.filter( element => element.temperature === "test");
+        console.log(result);
+
 
         return (
             <div className="exercise" style={divStyle}>
@@ -149,6 +157,7 @@ class Motorcycle extends React.Component {
                 </div>
 
                 <div className="input">
+
                     <div className="date">
                         <h4>날짜</h4>
                         <input type="date" className="date" onChange={this.onChangeHandler} />
@@ -156,7 +165,7 @@ class Motorcycle extends React.Component {
 
                     <div className="time">
                         <h4>시각</h4>
-                        <input type="datetime-local" className="time" onChange={this.onChangeHandler} />
+                        <input type="time" className="time" onChange={this.onChangeHandler} />
                     </div>
 
                     <div className="temperature">
