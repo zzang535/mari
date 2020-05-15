@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Sub_mari extends React.Component {
+class Sub_exercise extends React.Component {
 
   render() {
 
@@ -16,12 +16,12 @@ class Sub_mari extends React.Component {
 
     return(
       <div style={divStyle}>
-        <a href="/mari" style={aStyle}>Mari | </a>
-        <a href="/ai" style={aStyle}>Friends</a>
+        <a href="/exercise-before" style={aStyle}>Before | </a>
+        <a href="/exercise-after" style={aStyle}>After</a>
       </div>
     );
 
   }
 }
 
-export default Sub_mari;
+export default Sub_exercise;

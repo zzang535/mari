@@ -24,15 +24,22 @@ class Mari extends React.Component {
 
         <div className="box">
 
+        <div className="image">
+            <img src='/images/mari/mari5.JPG' width="400px"/>
+          </div>
+          <div className="text" style={textStyle}>
+            まりと申します。
+          </div>
+
           <div className="image">
-            <img src='/images/mari4.JPG' width="400px"/>
+            <img src='/images/mari/mari4.JPG' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             Hello Mask Woman!
           </div>
 
           <div className="image">
-            <img src='/images/mari.jpeg' width="400px"/>
+            <img src='/images/mari/mari.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             Hello Mari!

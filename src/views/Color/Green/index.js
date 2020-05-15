@@ -28,18 +28,35 @@ class Green extends React.Component {
         </div>
 
         <div className="box">
+
           <div className="image" style={imageStyle}>
-            <img src='/images/green/item2.jpeg' width="400px"/>
+            <img src='/images/color/green/item4.jpg' width="400px"/>
+          </div>
+          <div className="text" style={textStyle}>
+            Mari's Green vegetables
+          </div>
+
+          <div className="image" style={imageStyle}>
+            <img src='/images/color/green/item3.JPG' width="400px"/>
+          </div>
+          <div className="text" style={textStyle}>
+            June's Green vegetables
+          </div>
+
+          <div className="image" style={imageStyle}>
+            <img src='/images/color/green/item2.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             Mari's Deep Green Bag
           </div>
+
           <div className="image" style={imageStyle}>
-            <img src='/images/green/item1.jpeg' width="400px"/>
+            <img src='/images/color/green/item1.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             Incase Compact Sleeve
           </div>
+
         </div>
 
       </div>

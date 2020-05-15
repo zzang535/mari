@@ -29,7 +29,7 @@ class Color extends React.Component {
 
         <div className="box">
           <div className="image" style={imageStyle}>
-            <img src='/images/color.png' width="400px"/>
+            <img src='/images/color/color.png' width="400px"/>
           </div>
         </div>
 

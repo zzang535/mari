@@ -29,13 +29,13 @@ class White extends React.Component {
 
         <div className="box">
           <div className="image" style={imageStyle}>
-            <img src='/images/white/white2.jpeg' width="400px"/>
+            <img src='/images/color/white/white2.jpeg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             White animals
           </div>
           <div className="image" style={imageStyle}>
-            <img src='/images/white/white1.jpg' width="400px"/>
+            <img src='/images/color/white/white1.jpg' width="400px"/>
           </div>
           <div className="text" style={textStyle}>
             White people

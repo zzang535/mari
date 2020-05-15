@@ -146,10 +146,10 @@ class Motorcycle extends React.Component {
 
 
         return (
-            <div className="exercise" style={divStyle}>
+            <div className="motorcycle" style={divStyle}>
 
                 <div className="image">
-                    <img src='/images/motor.JPG' />
+                    <img src='/images/motor.png' />
                 </div>
 
                 <div className="title">

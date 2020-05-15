@@ -202,6 +202,10 @@ class Study extends React.Component {
         return (
             <div className="study" style={divStyle}>
 
+                <div className="image">
+                    <img src='https://media.giphy.com/media/13hUoTKyXJ3uQo/giphy.gif' />
+                </div>
+
                 <div className="title">
                     <h3>연구</h3>
                 </div>

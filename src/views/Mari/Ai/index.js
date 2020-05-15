@@ -26,20 +26,29 @@ class Ai extends React.Component {
         <div className="box">
 
            <div className="text" style={textStyle}>
-            Hello Ai!
+            We are Mari's friends.
           </div>
 
           <div className="image">
-            <img src = "/images/ai/ai3.JPG" alt=""/>
+            <img src = "/images/mari/mari-friends/ai6.jpg" alt=""/>
           </div>
           <div className="image">
-            <img src = "/images/ai/ai2.JPG" alt=""/>
+            <img src = "/images/mari/mari-friends/aiandkiki.JPG" alt=""/>
           </div>
           <div className="image">
-            <img src = "/images/ai/ai4.JPG" alt=""/>
+            <img src='/images/mari/mari-friends/kiki.jpg' alt=""/>
           </div>
           <div className="image">
-            <img src = "/images/ai/ai5.JPG" alt=""/>
+            <img src = "/images/mari/mari-friends/ai3.JPG" alt=""/>
+          </div>
+          <div className="image">
+            <img src = "/images/mari/mari-friends/ai2.JPG" alt=""/>
+          </div>
+          <div className="image">
+            <img src = "/images/mari/mari-friends/ai4.JPG" alt=""/>
+          </div>
+          <div className="image">
+            <img src = "/images/mari/mari-friends/ai5.JPG" alt=""/>
           </div>
 
 

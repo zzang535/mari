@@ -2,6 +2,8 @@ import React from 'react';
 
 import './index.scss';
 
+import Sub_june from '../../components/Sub_june';
+
 class June extends React.Component {
   render() {
 
@@ -20,32 +22,26 @@ class June extends React.Component {
     return(
       <div className="june" style={divStyle}>
 
+        <div className="sub_menu">
+          <Sub_june />
+        </div>
+
         <div className="box">
-          <div className="image" style={imageStyle}>
-            <img src='/images/june.jpeg' width="400px"/>
-          </div>
+          
           <div className="text" style={textStyle}>
             Hello June!
           </div>
+
+          <div className="image" style={imageStyle}>
+            <img src='/images/june/june2.JPG' width="400px"/>
+          </div>
+
+          <div className="image" style={imageStyle}>
+            <img src='/images/june/june.jpeg' width="400px"/>
+          </div>
+
         </div>
 
-        <div className="box">
-          <div className="image" style={imageStyle}>
-            <img src='/images/junes2.jpeg' width="400px"/>
-          </div>
-          <div className="text" style={textStyle}>
-            We are June's friends.
-          </div>
-        </div>
-
-        <div className="box">
-          <div className="image" style={imageStyle}>
-            <img src='/images/junes.jpeg' width="400px"/>
-          </div>
-          <div className="text" style={textStyle}>
-            We are Pure.
-          </div>
-        </div>
 
       </div>
 

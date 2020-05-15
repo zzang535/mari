@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Sub_mari extends React.Component {
+class Sub_june extends React.Component {
 
   render() {
 
@@ -16,12 +16,12 @@ class Sub_mari extends React.Component {
 
     return(
       <div style={divStyle}>
-        <a href="/mari" style={aStyle}>Mari | </a>
-        <a href="/ai" style={aStyle}>Friends</a>
+        <a href="/june" style={aStyle}>June | </a>
+        <a href="/june-friends" style={aStyle}>Friends</a>
       </div>
     );
 
   }
 }
 
-export default Sub_mari;
+export default Sub_june;
