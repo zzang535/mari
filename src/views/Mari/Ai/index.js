@@ -30,6 +30,9 @@ class Ai extends React.Component {
           </div>
 
           <div className="image">
+            <img src = "/images/mari/mari-friends/ai_7.jpg" alt=""/>
+          </div>
+          <div className="image">
             <img src = "/images/mari/mari-friends/ai6.jpg" alt=""/>
           </div>
           <div className="image">

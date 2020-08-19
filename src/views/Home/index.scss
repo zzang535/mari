@@ -1,12 +1,68 @@
-.home {
-    .text {
+* {
+    margin: 0;
+    padding: 0;
+}
 
+
+.home {
+    
+    .popup {
+        border: 1px solid black;
+        width: 95%;
+        max-width: 450px;
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        visibility: hidden;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+        .check {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255,255,255,0.2);
+        
+            font-size: 14px;
+            padding: 1px 5px;
+
+        }
+        .close {
+            border: 1px solid black;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 1px 5px;
+        }
+        
+    }
+    .active {
+        visibility: visible;
+    }
+    .box {
+        margin: auto;
+        background-color: red;
+        max-width: 400px;
+        width: 90%;
+        height: 100px;
+    }
+
+    .text {
+        text-align: center;
     }
 
     .image {
+        
         img {
             max-width: 400px;
             width: 90%;
+            display: block;
+            margin: 0 auto;
         }
     }
 }

@@ -24,6 +24,7 @@ class Exercise_before extends React.Component {
 
         // 배열 생성 
         let exercises = []
+        let sum;
 
         // 데이터 불러오기
         await firestore.collection('exercise').get().
@@ -38,20 +39,61 @@ class Exercise_before extends React.Component {
                 })
             })
 
+
+        function splitMulti(str, tokens){
+            var tempChar = tokens[0]; // We can use the first token as a temporary join character
+            for(var i = 1; i < tokens.length; i++){
+                str = str.split(tokens[i]).join(tempChar);
+            }
+            str = str.split(tempChar);
+            return str;
+        }
+
         // ************ 여기서 튜닝하시면 됩니다. ************** //
-        let distances = []
         // 워킹 합계 구하는 함수 
         function walkingSum() {
-            exercises.forEach(element => {
+
+            let distances = []
+            let kms = []; 
+            let sum = [];
+            let result = 0;
+            exercises.forEach((element, index) => {
+                console.log(index);
                 if(element.name === "mari"){
-                    let temp = element.content.split(" ");
+                    let temp = splitMulti(element.content, [' ', '/','\n','　']);
                     distances.push(temp);
                 }    
             });
             console.log(distances);
+
+            distances.forEach(element => {
+                element.forEach((element_s, index) => {
+                    if(element_s === "ウォーキング"){
+                        kms.push(element[index+1]);
+                    }
+                })
+            })
+            console.log(kms);
+
+            kms.forEach(element => {
+                sum.push(element.split('km'));
+            })
+            console.log(sum);
+            sum.forEach(element => {
+                result += Number(element[0]);
+            })
+
+            result = parseInt(result);
+            return result;
         }
+
+        sum = walkingSum();
+
+        this.setState({
+            walkingSum: sum,
+        });
         
-        walkingSum();
+       
 
         // compare function for array sort
         function compare(a, b) {
@@ -76,7 +118,7 @@ class Exercise_before extends React.Component {
             exercises: exercises,
         });
 
-        console.log(this.state.exercises);
+        //console.log(this.state.exercises);
     }
 
     onChangeHandler = (e) => {
@@ -120,6 +162,17 @@ class Exercise_before extends React.Component {
         }
     }
 
+    editHandler = (id) => {
+
+        // console.log(firestore.collection("exercise").doc(id)
+        
+        // var txt;
+        // var person = prompt("수정할 값을 입력해주세요 :",  );
+
+       
+    }
+
+    
 
     render() {
 
@@ -135,6 +188,7 @@ class Exercise_before extends React.Component {
                             {exercise.date} | {exercise.content}
                         </span>
                         <span className="delete">
+                            <button onClick={ () => this.editHandler(exercise.id) }>수정</button>
                             <button onClick={ () => this.deleteHandler(exercise.id) }>삭제</button>
                         </span>
                     </div>
@@ -151,6 +205,7 @@ class Exercise_before extends React.Component {
                             {exercise.date} | {exercise.content}
                         </span>
                         <span className="delete">
+                            <button onClick={ () => this.editHandler(exercise.id) }>수정</button>
                             <button onClick={ () => this.deleteHandler(exercise.id) }>삭제</button>
                         </span>
                     </div>
@@ -158,6 +213,9 @@ class Exercise_before extends React.Component {
 
             }  
         });
+
+        
+       
 
         return (
             <div className="exercise" style={divStyle}>
@@ -196,6 +254,8 @@ class Exercise_before extends React.Component {
                 <div className="output">
                     <div className="mari">
                         <h1>MARI</h1>
+                        <h3>마리씨는 지금까지 {this.state.walkingSum}km를 걸었습니다!</h3>
+                        <h3>대단합니다!</h3>
                         {MariTakeDisplay}
                     </div>
                     <br />

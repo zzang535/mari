@@ -53,6 +53,14 @@ class History extends React.Component {
           역사를 보면 2-3개월에 한번 씩 작은 트러블이 오는 것 같습니다. 
         </div>
 
+        <div className="box">
+          2020.8.17
+          <br /><br />
+          まりさんとじゅんさんが一年になりました。ありがとうございます。
+          <br />
+          마리씨와 준씨가 1년이 되었습니다. 감사합니다. 
+        </div>
+
       </div>
     );
   }
