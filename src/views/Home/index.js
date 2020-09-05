@@ -54,6 +54,7 @@ class Home extends React.Component {
     });
 
     console.log(GetCookie('closeToday'));
+    console.log(GetCookie('closeToday'));
 
   }
 
