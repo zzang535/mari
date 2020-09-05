@@ -26,7 +26,7 @@ class Home extends React.Component {
 
     // SetCookie
     function SetCookie(name, value, expiredays){
-      var days=10;
+      var days=1;
       if(days){
         var date=new Date(); 
         date.setTime(date.getTime()+(days*24*60*60*1000));
