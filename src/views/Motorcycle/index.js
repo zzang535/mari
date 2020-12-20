@@ -11,11 +11,14 @@ class Motorcycle extends React.Component {
 
         ],
         id: '',
+
         date: '',
         time: '',
         temperature: '',
-        warmup: '',
-        continue: '',
+
+        distance: '',
+        refuel: '',
+        
         etc: '',
     }
 
@@ -23,7 +26,7 @@ class Motorcycle extends React.Component {
 
         let motorcycles = []
 
-        await firestore.collection('motorcycle').get().
+        await firestore.collection('motorcycle_2').get().
             then(docs => {
                 docs.forEach(doc => {
                     motorcycles.push({
@@ -31,8 +34,8 @@ class Motorcycle extends React.Component {
                         date: doc.data().date,
                         time: doc.data().time,
                         temperature: doc.data().temperature,
-                        warmup: doc.data().warmup,
-                        continue: doc.data().continue,
+                        distance: doc.data().distance,
+                        refuel: doc.data().refuel,
                         etc: doc.data().etc,
                     });
                 })
@@ -78,12 +81,12 @@ class Motorcycle extends React.Component {
 
         if (r === true) {
 
-            firestore.collection("motorcycle").add({
+            firestore.collection("motorcycle_2").add({
                 date: this.state.date,
                 time: this.state.time,
                 temperature: this.state.temperature,
-                warmup: this.state.warmup,
-                continue: this.state.continue,
+                distance: this.state.distance,
+                refuel: this.state.refuel,
                 etc: this.state.etc,
             }).then(r => {
                 window.confirm("등록완료");
@@ -127,8 +130,8 @@ class Motorcycle extends React.Component {
                             날짜 : {motorcycle.date} | 
                             시각 : {motorcycle.time} | 
                             기온 : {motorcycle.temperature} | 
-                            예열 : {motorcycle.warmup} | 
-                            시동지속 : {motorcycle.continue} | 
+                            주행거리 : {motorcycle.distance} | 
+                            주유량 : {motorcycle.refuel} | 
                             기타정비 : {motorcycle.etc} | 
                             <br />
                         </span>
@@ -148,15 +151,13 @@ class Motorcycle extends React.Component {
         return (
             <div className="motorcycle" style={divStyle}>
 
-                <div className="image">
+                <div className="main-image">
                     <img src='/images/motor.png' />
                 </div>
 
-                <div className="title">
-                    <h3>모터사이클</h3>
-                </div>
-
                 <div className="input">
+
+                    <h3 className="title">motocycle-check</h3>
 
                     <div className="date">
                         <h4>날짜</h4>
@@ -172,13 +173,13 @@ class Motorcycle extends React.Component {
                         <h4>기온</h4>
                         <textarea className="temperature" onChange={this.onChangeHandler} />
                     </div>
-                    <div className="warmup">
-                        <h4>예열</h4>
-                        <textarea className="warmup" onChange={this.onChangeHandler} />
+                    <div className="distance">
+                        <h4>주행거리</h4>
+                        <textarea className="distance" onChange={this.onChangeHandler} />
                     </div>
-                    <div className="continue">
-                        <h4>시동지속</h4>
-                        <textarea className="continue" onChange={this.onChangeHandler} />
+                    <div className="refuel">
+                        <h4>주유량</h4>
+                        <textarea className="refuel" onChange={this.onChangeHandler} />
                     </div>
                     <div className="etc">
                         <h4>기타정비</h4>
@@ -189,13 +190,16 @@ class Motorcycle extends React.Component {
                     </div>
                 </div>
 
+
                 <div className="output">
+
+                    <h3 className="title">check-history</h3>
+
                     <div className="june">
-                        <h1>JUNE</h1>
                         {JuneTakeDisplay}
-                    </div>                   
-                </div>
-                
+                    </div>
+
+                </div>                
         
             </div>
         );
